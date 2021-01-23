@@ -13,6 +13,7 @@ namespace Metotlar
             Console.WriteLine("Tebrikler, sepete eklendi : " + urun.Adi);           
         }
 
+
      
     }
 }
