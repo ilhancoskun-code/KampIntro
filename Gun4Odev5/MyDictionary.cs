@@ -4,35 +4,55 @@ using System.Text;
 
 namespace Gun4Odev5
 {
-    class MyDictionary<K,V>
+    class MyDictionary<Kd,Vd>
     {
+        Kd[] keyArray;
+        Vd[] valueArray;
 
-        K[] keys;
-        V[] values;
-        //constructor >> class oluşurken direk çalışan yapılar
         public MyDictionary()
         {
-            keys = new K[0];
-            values = new V[0];
-            
+            keyArray = new Kd[0];
+            valueArray=new Vd[0];
         }
 
-        public void Add(K key,V value)
+
+        public void Add(Kd kd, Vd vd )
         {
-            K[] tempKeys = keys;
-            V[] tempValues = values;
-            
-            keys = new K[keys.Length + 1];
-            values = new V[values.Length + 1];
+            Kd[] tempKeyArray = keyArray;
+            Vd[] tempValueArray = valueArray;
+            keyArray = new Kd[keyArray.Length + 1];
+            valueArray = new Vd[valueArray.Length + 1];
 
 
-            for (int i = 0; i < tempArray.Length; i++)
+            for (int i = 0; i < tempKeyArray.Length; i++)
             {
-                items[i] = tempArray[i];
+                keyArray[i] = tempKeyArray[i];
 
             }
 
-            items[items.Length - 1] = item;
+            for (int j = 0; j < tempValueArray.Length; j++)
+            {
+                valueArray[j] = tempValueArray[j];
+            }
+
+
+            keyArray[keyArray.Length - 1] = kd;
+            valueArray[valueArray.Length - 1] = vd;
+
+
+         }
+
+        public Kd[] itemkey
+        {
+            get { return keyArray; }
+        }
+        public Vd[] itemvalue
+        {
+            get { return valueArray; }
+        }
+        public int Length
+        {
+            get { return keyArray.Length; }
         }
     }
 }
