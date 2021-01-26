@@ -6,53 +6,53 @@ namespace Ocak20Odev5
 {
     class MyDictionary<Kd, Vd>
     {
-        Kd[] keyArray;
-        Vd[] valueArray;
+        Kd[] kArray;
+        Vd[] vArray;
 
         public MyDictionary()
         {
-            keyArray = new Kd[0];
-            valueArray = new Vd[0];
+            kArray = new Kd[0];
+            vArray = new Vd[0];
         }
 
 
         public void Add(Kd kd, Vd vd)
         {
-            Kd[] tempKeyArray = keyArray;
-            Vd[] tempValueArray = valueArray;
-            keyArray = new Kd[keyArray.Length + 1];
-            valueArray = new Vd[valueArray.Length + 1];
+            Kd[] tempKeyArray = kArray;
+            Vd[] tempValueArray = vArray;
+            kArray = new Kd[kArray.Length + 1];
+            vArray = new Vd[vArray.Length + 1];
 
 
             for (int i = 0; i < tempKeyArray.Length; i++)
             {
-                keyArray[i] = tempKeyArray[i];
+                kArray[i] = tempKeyArray[i];
 
             }
 
             for (int j = 0; j < tempValueArray.Length; j++)
             {
-                valueArray[j] = tempValueArray[j];
+                vArray[j] = tempValueArray[j];
             }
 
 
-            keyArray[keyArray.Length - 1] = kd;
-            valueArray[valueArray.Length - 1] = vd;
+            kArray[kArray.Length - 1] = kd;
+            vArray[vArray.Length - 1] = vd;
 
 
         }
 
-        public Kd[] itemkey
+        public Kd[] key
         {
-            get { return keyArray; }
+            get { return kArray; }
         }
-        public Vd[] itemvalue
+        public Vd[] value
         {
-            get { return valueArray; }
+            get { return vArray; }
         }
         public int Length
         {
-            get { return keyArray.Length; }
+            get { return kArray.Length; }
         }
     }
 }

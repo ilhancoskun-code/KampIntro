@@ -17,7 +17,7 @@ namespace Ocak20Odev5
             for (int i = 0; i < myDictionary.Length; i++)
             {
 
-                Console.WriteLine("sayfa " + myDictionary.itemkey[i] + " İçerik: " + myDictionary.itemvalue[i]);
+                Console.WriteLine("sayfa " + myDictionary.key[i] + " İçerik: " + myDictionary.value[i]);
                 Console.WriteLine("**********");
 
             }
